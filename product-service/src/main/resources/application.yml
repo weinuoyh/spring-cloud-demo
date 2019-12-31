@@ -1,0 +1,15 @@
+
+server:
+  port: 8000
+spring:
+  application:
+    name: service-product
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.94.147.205:3306/sxt?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&rewriteBatchedStatements=true&useSSL=false
+    username: root
+    password: weinuo11
+  jpa:
+    database: mysql
+    show-sql: true
+    open-in-view: true
