@@ -1,16 +1,30 @@
 
 server:
-port: 8001
+  port: 8002
 spring:
-application:
-name: order-product
-datasource:
-driver-class-name: com.mysql.jdbc.Driver
-url: jdbc:mysql://47.94.147.205:3306/sxt?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&rewriteBatchedStatements=true&useSSL=false
-username: root
-password: weinuo11
-jpa:
-database: mysql
-show-sql: true
-open-in-view: true
+  application:
+    name: service-order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.94.147.205:3306/sxt?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&rewriteBatchedStatements=true&useSSL=false
+    username: root
+    password: weinuo11
+  jpa:
+    database: mysql
+    show-sql: true
+    open-in-view: true
+  sleuth:
+    traceId128: true
+    sampler:
+      probability: 1.0
+  zipkin:
+#    base-url: http://localhost:9411
+    base-url: http://47.94.147.205:9411
+eureka:
+  client:
+    service-url: #配置暴露给eureka Server的请求地址
+      defaultZone: http://localhost:8000/eureka/
+  instance:
+    prefer-ip-address: true
+    #/Users/sxt/Desktop/sxt/moerlong/log/stdout.log
 

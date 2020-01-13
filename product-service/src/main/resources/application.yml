@@ -1,6 +1,6 @@
 
 server:
-  port: 8000
+  port: 8001
 spring:
   application:
     name: service-product
@@ -13,3 +13,18 @@ spring:
     database: mysql
     show-sql: true
     open-in-view: true
+  sleuth:
+    traceId128: true
+    sampler:
+      probability: 1.0
+  zipkin:
+#    base-url: http://localhost:9411
+    base-url: http://47.94.147.205:9411
+eureka:
+  client:
+    service-url: #配置暴露给eureka Server的请求地址
+      defaultZone: http://localhost:8000/eureka/
+  instance:
+    prefer-ip-address: true
+
+
