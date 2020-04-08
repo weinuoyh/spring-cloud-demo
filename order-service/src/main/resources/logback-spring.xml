@@ -32,8 +32,8 @@
 
 
     <!--这个改为DEBUG则会打印最详细的日志，包括mybatis的sql语句（量太大建议开发测试时才用）-->
-    <root level="INFO">
-        <!--<root level="DEBUG">-->
+<!--    <root level="INFO">-->
+        <root level="DEBUG">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
 
