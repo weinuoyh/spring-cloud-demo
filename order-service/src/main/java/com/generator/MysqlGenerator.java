@@ -1,4 +1,4 @@
-package com.sxt.generator;
+package com.generator;
 
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;

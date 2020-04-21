@@ -1,8 +1,8 @@
-package com.sxt.service.impl;
+package com.service.impl;
 
-import com.sxt.dao.ProductDao;
-import com.sxt.entity.Product;
-import com.sxt.service.ProductService;
+import com.service.ProductService;
+import com.dao.ProductDao;
+import com.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,11 +1,13 @@
-package com.sxt.controller;
+package com.controller;
 
-import com.sxt.entity.Product;
-import com.sxt.entity.TbOrder;
-import com.sxt.service.ITbOrderService;
+import com.entity.Product;
+import com.entity.TbOrder;
+
+import com.service.ITbOrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,12 +22,14 @@ public class OrderController {
     RestTemplate restTemplate;
     @Autowired
     ITbOrderService iTbOrderService;
+    @Autowired
+    private StringRedisTemplate redisTemplate;
     @RequestMapping("findorder")
 public Product order(@RequestParam(value = "orderid") long id){
         Product product = restTemplate.getForObject("http://SERVICE-PRODUCT/product/findbyid?id="+id, Product.class);
         System.out.println(product.toString());
         logger.info("成功");
-        return product;   
+        return product;
 }
     @RequestMapping("/test")
     public String test() {
@@ -38,6 +42,12 @@ public Product order(@RequestParam(value = "orderid") long id){
 
         logger.info("成功");
         return tbOrder;
+    }
+    @RequestMapping("login")
+    public String login(@RequestParam(value = "name") String name,@RequestParam(value = "password") String password){
+
+        logger.info("成功");
+        return "";
     }
     public static void main(String[] args) {
 

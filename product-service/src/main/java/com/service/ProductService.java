@@ -1,6 +1,6 @@
-package com.sxt.service;
+package com.service;
 
-import com.sxt.entity.Product;
+import com.entity.Product;
 
 public interface ProductService {
 

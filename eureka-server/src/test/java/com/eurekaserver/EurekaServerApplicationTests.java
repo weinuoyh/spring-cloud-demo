@@ -1,4 +1,4 @@
-package com.sxt.eurekaserver;
+package com.eurekaserver;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
