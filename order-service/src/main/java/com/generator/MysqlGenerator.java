@@ -59,7 +59,7 @@ public class MysqlGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(scanner("order"));
+//        pc.setModuleName(scanner("order"));
         pc.setParent("com");
         mpg.setPackageInfo(pc);
 

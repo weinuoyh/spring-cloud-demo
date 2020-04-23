@@ -43,12 +43,7 @@ public Product order(@RequestParam(value = "orderid") long id){
         logger.info("成功");
         return tbOrder;
     }
-    @RequestMapping("login")
-    public String login(@RequestParam(value = "name") String name,@RequestParam(value = "password") String password){
 
-        logger.info("成功");
-        return "";
-    }
     public static void main(String[] args) {
 
         System.out.println(Runtime.getRuntime().availableProcessors());

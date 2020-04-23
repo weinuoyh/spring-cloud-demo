@@ -26,9 +26,9 @@ spring:
     port: 6379
     password: weinuo11
     timeout: 30
+
   session:
     store-type: redis
-
 eureka:
   client:
     service-url: #配置暴露给eureka Server的请求地址
@@ -54,5 +54,6 @@ mybatis-plus:
       logic-not-delete-value: 1
       db-type: mysql
     refresh: false
-
+redis:
+  maxInactiveSeconds: 5
 
